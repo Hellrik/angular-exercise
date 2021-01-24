@@ -133,6 +133,15 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/cdk@^11.1.0":
+  version "11.1.0"
+  resolved "https://artifact.swissre.com/api/npm/npm/@angular/cdk/-/cdk-11.1.0.tgz#35a5f60b79265cbd340c9ed1519b5c460ee5d6da"
+  integrity sha1-NaX2C3kmXL00DJ7RUZtcRg7l1to=
+  dependencies:
+    tslib "^2.0.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~11.1.1":
   version "11.1.1"
   resolved "https://artifact.swissre.com/api/npm/npm/@angular/cli/-/cli-11.1.1.tgz#897dd3273434f5092cbcde515737d6c72612eae7"
@@ -216,6 +225,13 @@
   version "11.1.0"
   resolved "https://artifact.swissre.com/api/npm/npm/@angular/forms/-/forms-11.1.0.tgz#6ab2e81df80dc9a9d0898d2a57270de5d9eb30e5"
   integrity sha1-arLoHfgNyanQiY0qVycN5dnrMOU=
+  dependencies:
+    tslib "^2.0.0"
+
+"@angular/material@^11.1.0":
+  version "11.1.0"
+  resolved "https://artifact.swissre.com/api/npm/npm/@angular/material/-/material-11.1.0.tgz#2f68f55efc049fa9b036cb2bb3b4f4aae0f67fa2"
+  integrity sha1-L2j1XvwEn6mwNssrs7T0quD2f6I=
   dependencies:
     tslib "^2.0.0"
 
@@ -1076,6 +1092,13 @@
     loader-utils "^2.0.0"
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
+
+"@ngrx/store@^10.1.2":
+  version "10.1.2"
+  resolved "https://artifact.swissre.com/api/npm/npm/@ngrx/store/-/store-10.1.2.tgz#a41aee81ea7b7e4a9f927be560e6024830211efb"
+  integrity sha1-pBrugep7fkqfknvlYOYCSDAhHvs=
+  dependencies:
+    tslib "^2.0.0"
 
 "@ngtools/webpack@11.1.1":
   version "11.1.1"
@@ -6316,6 +6339,11 @@ parse5-sax-parser@^6.0.1:
   integrity sha1-mLTTZrWyZqfNkLS1iQZmeviC2ro=
   dependencies:
     parse5 "^6.0.1"
+
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://artifact.swissre.com/api/npm/npm/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha1-9o5OW6GFKsLK3AD0VV//bCq7YXg=
 
 parse5@^6.0.1:
   version "6.0.1"
