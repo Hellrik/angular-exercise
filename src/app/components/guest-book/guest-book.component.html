@@ -1,0 +1,9 @@
+<div class="guest-book-form-wrapper">
+  <app-guest-book-form (addRecord)="onAddRecord($event)"> </app-guest-book-form>
+</div>
+<div *ngFor="let record of records$ | async" class="guest-book-record-wrapper">
+  <app-guest-book-record
+    [user]="record.user"
+    [message]="record.message"
+  ></app-guest-book-record>
+</div>

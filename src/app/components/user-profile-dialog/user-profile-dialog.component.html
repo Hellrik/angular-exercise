@@ -1,0 +1,20 @@
+<ng-container *ngIf="user">
+  <div class="wrapper">
+    <h2>{{ user.username }}'s Profile</h2>
+    <div>
+      <img alt="img" [src]="getAvatar()" />
+    </div>
+    <mat-dialog-content>
+      <mat-card-content>
+        <div>Full name: {{ user.name }}</div>
+        <div>From: {{ user.address.city }}</div>
+        <div>E-mail: {{ user.email }}</div>
+        <div>Phone: {{ user.phone }}</div>
+        <div>Website: {{ user.website }}</div>
+      </mat-card-content>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Close</button>
+    </mat-dialog-actions>
+  </div>
+</ng-container>

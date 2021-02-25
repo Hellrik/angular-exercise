@@ -1,0 +1,26 @@
+<div class="post">
+  <div *ngIf="loadingPost$ | async" class="spinner-container">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div *ngIf="loadingPostError$ | async" class="error-msg">
+    Could not load post data
+  </div>
+  <app-post
+    *ngIf="post$ | async"
+    [data]="post$ | async"
+    [showActions]="false"
+  ></app-post>
+</div>
+
+<div class="comments">
+  <div class="title">Comments:</div>
+  <div *ngIf="loadingComments$ | async" class="spinner-container">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div *ngIf="loadingCommentsError$ | async" class="error-msg">
+    Could not load post comments
+  </div>
+  <div class="comment" *ngFor="let comment of comments$ | async">
+    <app-comment [comment]="comment"></app-comment>
+  </div>
+</div>

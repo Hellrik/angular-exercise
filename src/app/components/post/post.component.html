@@ -1,0 +1,15 @@
+<mat-card class="post" *ngIf="data">
+  <mat-card-header class="post-header">
+    <mat-card-title>
+      {{ data.title }}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="post-content">
+    {{ data.body }}
+  </mat-card-content>
+  <mat-card-actions *ngIf="showActions" [align]="'end'">
+    <button mat-icon-button (click)="onCommentClick()">
+      <mat-icon>comment</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

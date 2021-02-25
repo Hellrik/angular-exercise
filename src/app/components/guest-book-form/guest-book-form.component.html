@@ -1,0 +1,64 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Feedback form </mat-panel-title>
+    <mat-panel-description> Click to open </mat-panel-description>
+  </mat-expansion-panel-header>
+  <form [formGroup]="formGroup" autocomplete="off">
+    <div class="fields-wrapper">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input type="text" matInput [formControl]="username" />
+        <mat-error *ngIf="username.hasError('required')">
+          Username is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [formControl]="email" />
+        <mat-error
+          *ngIf="email.hasError('email') && !email.hasError('required')"
+        >
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="email.hasError('required')">
+          Email is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input type="text" matInput [formControl]="name" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>City</mat-label>
+        <input type="text" matInput [formControl]="city" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input type="text" matInput [formControl]="phone" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Website</mat-label>
+        <input type="text" matInput [formControl]="website" />
+      </mat-form-field>
+    </div>
+    <mat-form-field class="message-field">
+      <mat-label>Message</mat-label>
+      <textarea type="text" matInput [formControl]="message"></textarea>
+      <mat-error
+        *ngIf="message.hasError('required') || message.hasError('minlength')"
+      >
+        Message should contain at least 20 characters
+      </mat-error>
+    </mat-form-field>
+    <div class="actions">
+      <button
+        type="submit"
+        (click)="onAddRecord()"
+        mat-raised-button
+        color="primary"
+      >
+        Add record
+      </button>
+    </div>
+  </form>
+</mat-expansion-panel>
